@@ -1,0 +1,29 @@
+#testimonials {
+    padding: 3rem 0;
+  }
+  
+  #testimonials h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .testimonial-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem !important;
+  }
+  
+  .testimonial-card p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .testimonial-card h5 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  

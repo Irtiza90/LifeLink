@@ -1,0 +1,31 @@
+#about {
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+  }
+  
+  #about h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #about .stat-number {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  #about .stat-description {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  #about .row div {
+    margin-bottom: 2rem;
+  }
+  
+  #about i {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  

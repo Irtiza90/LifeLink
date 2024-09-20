@@ -1,0 +1,37 @@
+#contact {
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+  }
+  
+  #contact h2 {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  #contact form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #contact .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #contact .form-control, 
+  #contact .form-select {
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+  }
+  
+  #contact .form-control:focus, 
+  #contact .form-select:focus {
+    border-color: #007bff;
+    box-shadow: none;
+  }
+  
+  #contact button {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+  }
+  

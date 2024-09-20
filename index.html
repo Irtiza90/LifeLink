@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeLink eAmbulance Service</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/fontawesome.css">
+
+  <link href="./css/contact.css" rel="stylesheet" />
+  <link href="./css/about.css" rel="stylesheet" />
+  <link href="./css/testimonial.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      /* margin-bottom: 2rem; */
+    }
+    .hero {
+      background: url("./banner.jpg") no-repeat center center;
+      background-size: cover;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero h1 {
+      color: white;
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+    }
+    .card-title {
+      font-weight: bold;
+    }
+    .filter-form {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">LifeLink eAmbulance</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Emergency eAmbulance Services</h1>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="my-5 py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About LifeLink eAmbulance</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="fas fa-ambulance fa-3x text-primary mb-3"></i>
+          <h3 class="stat-number">150+</h3>
+          <p class="stat-description">Ambulances Available</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-heartbeat fa-3x text-danger mb-3"></i>
+          <h3 class="stat-number">5000+</h3>
+          <p class="stat-description">Lives Saved</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-clock fa-3x text-success mb-3"></i>
+          <h3 class="stat-number">24/7</h3>
+          <p class="stat-description">Service Availability</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-calendar-check fa-3x text-warning mb-3"></i>
+          <h3 class="stat-number">3000+</h3>
+          <p class="stat-description">Successful Bookings</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-map-marker-alt fa-3x text-info mb-3"></i>
+          <h3 class="stat-number">100+</h3>
+          <p class="stat-description">Cities Covered</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-smile fa-3x text-success mb-3"></i>
+          <h3 class="stat-number">99%</h3>
+          <p class="stat-description">Customer Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Main Content Section -->
+  <section id="services" class="container mt-5">
+    <!-- Filter and Search Section -->
+    <div class="row filter-form">
+      <div class="col-md-4">
+        <input type="text" class="form-control" id="searchInput" placeholder="Search eAmbulance by type..." style="border-radius: 10px;padding: 20px;" />
+      </div>
+      <div class="col-md-4">
+        <select class="form-select" id="sortSelect" style="border-radius: 10px;padding: 20px;">
+          <option value="costLowHigh" >Sort by Cost: Low to High</option>
+          <option value="costHighLow">Sort by Cost: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Ambulances -->
+    <div class="row" id="ambulanceList">
+      <!--dynamically added here -->
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faqs" class="mt-5">
+    <h2 class="text-center mb-4">FAQs</h2>
+
+    <div class="accordion container" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            How can I book an ambulance?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+          <div class="accordion-body">
+            You can book an ambulance by visiting our website. Simply enter your location, select the type of service you need, and confirm your booking. You'll receive updates on the ambulance's arrival shortly.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            What types of ambulances do you offer?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+          <div class="accordion-body">
+            We provide various types of ambulances including <strong>Basic Life Support (BLS)</strong>, <strong>Advanced Life Support (ALS)</strong>, and <strong>Neonatal Intensive Care Unit (NICU)</strong> ambulances. The selection depends on the patient's medical needs.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Can I book an ambulance in advance?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+          <div class="accordion-body">
+            Yes, you can pre-book an ambulance for scheduled medical appointments or inter-hospital transfers. Simply choose the date and time you need the service, and we will arrange it for you.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+            How do I know which ambulance type I need?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+          <div class="accordion-body">
+            If you're unsure, our team will assist you. In emergency situations, it's best to call our helpline or you can use the chat feature, and our medical support staff will guide you to choose the right type of ambulance.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+            What areas do you serve?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+          <div class="accordion-body">
+            We provide eAmbulance services in multiple cities and regions. You can check if your location is covered by entering your city or area code on our website.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+            How much does it cost to book an ambulance?
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
+          <div class="accordion-body">
+            The cost depends on the type of ambulance, the distance to the destination, and any additional services required. You'll receive a detailed quote before confirming your booking.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+            Are your ambulances available 24/7?
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
+          <div class="accordion-body">
+            Yes, our ambulance services operate 24/7, ensuring that you can access emergency medical transportation at any time.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
+            Do you provide paramedics or medical staff in the ambulance?
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight">
+          <div class="accordion-body">
+            Yes, depending on the type of ambulance service you book, trained paramedics, nurses, or doctors may accompany the patient to provide necessary medical support during the journey.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNine">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+            Do you provide paramedics or medical staff in the ambulance?
+          </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine">
+          <div class="accordion-body">
+            Yes, depending on the type of ambulance service you book, trained paramedics, nurses, or doctors may accompany the patient to provide necessary medical support during the journey.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">What Our Users Say</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="testimonial-card p-3">
+            <p>"LifeLink's fast response time saved my dad's life. We were able to book an ICU ambulance within minutes!"</p>
+            <h5>- Sarah J.</h5>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card p-3">
+            <p>"The service was excellent. The paramedics arrived on time and were very professional. Highly recommended!"</p>
+            <h5>- Michael R.</h5>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card p-3">
+            <p>"Easy to book, great customer support, and prompt ambulance arrival. A lifesaving service for sure!"</p>
+            <h5>- Priya K.</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light py-5 mt-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Request an Ambulance</h2>
+      <form id="contactForm">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="location" class="form-label">Your Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter your location" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="ambulanceType" class="form-label">Select Ambulance Type</label>
+            <select class="form-select" id="ambulanceType" required>
+              <!-- <option selected value="" disabled>Choose...</option> -->
+              <option value="Basic Ambulance">Basic Ambulance</option>
+              <option value="Advanced Ambulance">Advanced Ambulance</option>
+              <option value="ICU Ambulance">ICU Ambulance</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Additional Information (Optional)</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Any other details"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Request Ambulance</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-light text-center p-4" id="contact">
+    <p class="mb-0">
+      &copy; 2024 LifeLink eAmbulance. All Rights Reserved. | Contact: +123 456 7890 | Email: support@lifelink.com
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS and Custom Script -->
+  <script src="./bootstrap.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
